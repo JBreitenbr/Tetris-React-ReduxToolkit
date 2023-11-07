@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   nextRotation,
   detectCollision,
-  detectVerticalCollision,
   addTetroToBoard,
   checkRows,
   randomShape,
@@ -36,7 +35,7 @@ const gameSlice = createSlice({
       }
     },
     moveDown: (state) => {
-      const { shape, board, x, y, rotation, nextShape, score, isRunning } = state;
+      const { shape, board, x, y, rotation, nextShape, score, lines, isRunning } = state;
       if (!detectCollision(board,shape,rotation,x,y,1,0)) {
         state.x = x + 1;
       } else {
@@ -53,10 +52,11 @@ const gameSlice = createSlice({
           state.shape = nextShape;
           state.nextShape = randomShape();
 
-          state.score = score + checkRows(newBoard);
+          state.score = score + checkRows(newBoard)[1];
+          state.lines = lines + checkRows(newBoard)[0];
           state.isRunning = isRunning;
           state.x = 0;
-          state.y = 4;
+          state.y = 5;
           state.rotation = 0;
         }
       }
