@@ -1,0 +1,91 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(12,20px) ;
+  grid-gap: 0;
+  align-self: center;
+}
+
+.block {
+  background-color: darkgrey;
+  height: 20px;
+  width: 20px;
+  font-size: 10px;
+  text-align: center;
+  border: 0.5px solid lightgrey;
+}
+
+.outer {
+  border: 2px solid #737373;
+  /*margin-bottom: 5px;*/
+}
+
+.color-T {
+  background-color: rgba(132, 61, 198,0.8);
+  color: rgba(132,61,198,1);
+  border: 5px solid;
+border-bottom-color: rgba(132,61,198, 0.1);
+  border-right-color: rgba(132,61,198, 1);
+  border-top-color: rgba(132,61,198, 1);
+  border-left-color: rgba(132,61,198,0.3);
+}
+
+.color-O {
+  background-color: rgba(222, 167, 29,0.8);
+  color: rgba(222,167,29,1);
+    border: 5px solid;
+border-bottom-color: rgba(222,167,29, 0.1);
+  border-right-color: rgba(222,167,29, 1);
+  border-top-color: rgba(222,167,29, 1);
+  border-left-color: rgba(222,167,29,0.3);
+}
+
+.color-L {
+  background-color: rgba(179, 66, 120,0.8);
+  color: rgba(179,66,120,1);
+      border: 5px solid;
+border-bottom-color: rgba(179,66,120, 0.1);
+  border-right-color: rgba(179,66,120, 1);
+  border-top-color: rgba(179,66,120, 1);
+  border-left-color: rgba(179,66,120,0.3);
+}
+
+.color-J {
+  background-color: rgba(36, 95, 223,0.8);
+  color: rgba(36,95,223,1);
+  
+      border: 5px solid;
+border-bottom-color: rgba(36,95,223, 0.1);
+  border-right-color: rgba(36,95,223, 1);
+  border-top-color: rgba(36,95,223,1);
+  border-left-color: rgba(36,95,223,0.3);
+}
+
+.color-I {
+  background-color: rgba( 30, 177, 180 ,0.8);
+  color: rgba(30,177,180,1);
+      border: 5px solid;
+border-bottom-color: rgba(30,177,180, 0.1);
+  border-right-color: rgba(30,177,180, 1);
+  border-top-color: rgba(30,177,180,1);
+  border-left-color: rgba(30,177,180,0.3);
+}
+
+.color-S {
+  background-color: rgba(5,144,55,0.8);
+  color: rgba(5,144,55,0.8);
+      border: 5px solid;
+border-bottom-color: rgba(5,144,55, 0.1);
+  border-right-color: rgba(5,144,55, 1);
+  border-top-color: rgba(5,144,55,1);
+  border-left-color: rgba(5,144,55,0.3);
+}
+
+.color-Z {
+  background-color: rgba(208, 124, 34,0.8);
+  color: rgba(208,124,34,1);
+      border: 5px solid;
+border-bottom-color: rgba(208,124,34, 0.1);
+  border-right-color: rgba(208,124,34, 1);
+  border-top-color: rgba(208,124,34,1);
+  border-left-color: rgba(208,124,34,0.3);
+  }

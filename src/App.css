@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: papayawhip;
+}
+.flex-row {
+  margin-top: 30px;
+  display: flex;
+}
+
+.comp-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}

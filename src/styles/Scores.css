@@ -1,0 +1,29 @@
+.score-board {
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50vw;
+  margin-left: 6vw;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color:#44397d;
+  /*border: 1px solid #44397d;*/
+}
+
+.score-btn-container {
+  display: inline;
+  margin-left: 6vw;
+}
+
+.score-board-button {
+  padding: 1em;
+  border-width: 2px;
+  border-color: none;
+  background-color: #44397d;
+  color: white;
+  width: 80px;
+}
