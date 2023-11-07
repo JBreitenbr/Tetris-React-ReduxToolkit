@@ -37,7 +37,7 @@ const gameSlice = createSlice({
     },
     moveDown: (state) => {
       const { shape, board, x, y, rotation, nextShape, score, isRunning } = state;
-      if (!detectVerticalCollision(board,shape,rotation,x,y,1)) {
+      if (!detectCollision(board,shape,rotation,x,y,1,0)) {
         state.x = x + 1;
       } else {
         const obj = addTetroToBoard(board,shape,rotation,x,y);

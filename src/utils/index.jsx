@@ -239,7 +239,7 @@ export let defaultState = () => {
 export function nextRotation(shape, rotation){
   return (rotation+1)%4;
 };
-
+/*
 export function detectCollision(board, shape, rotation, x, y, moveX, moveY){
   let tetr=tetrObj[shape][rotation];
   for(let i=0;i<4;i++){
@@ -261,6 +261,30 @@ export function detectCollision(board, shape, rotation, x, y, moveX, moveY){
     }
    } 
   }
+  return false;
+}*/
+
+export function detectCollision(board,shape,rotation,x,y,moveX,moveY) {
+  let tetro=tetrObj[shape][rotation];
+  for (let i=0;i<4;i++) {
+    for (let j=0;j<4;j++) {
+      if (tetro[i][j]!=="") {
+        let moveToX=i+x+moveX;
+        let moveToY=j+y+moveY;
+        let moveToRow=board[moveToX];
+        if (moveToRow) {
+          if (
+            moveToRow[moveToY] === undefined ||
+            moveToRow[moveToY] !==""
+          ) {
+            return true;
+          }
+        } else {
+            return true;
+        }
+      }
+     }
+    }
   return false;
 }
 export function detectVerticalCollision(board, shape, rotation, x, y, moveX){
