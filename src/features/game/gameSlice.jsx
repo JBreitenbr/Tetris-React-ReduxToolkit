@@ -43,7 +43,7 @@ const gameSlice = createSlice({
         const newBoard = obj.board;
         const gameOver = obj.gameOver;
         if (gameOver) {
-          state.shape = 0;
+          state.shape = "";
           state.gameOver = gameOver;
           state.board = newBoard;
           state.isRunning = false;

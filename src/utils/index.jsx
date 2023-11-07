@@ -317,7 +317,7 @@ export function addTetroToBoard(board,shape,rotation,x,y){
     let newBoard = [...board];            for (let i=0;i<4;i++) {
       for (let j=0;j<4;j++) {
         if (tetr[i][j]!=="") {
-           if (i+x<4) {
+           if (i+x<1) {
              fitOnBoard=false;
            } else {
           newBoard[i+x][j+y] = shape;

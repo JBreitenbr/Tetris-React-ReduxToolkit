@@ -5,7 +5,7 @@
   align-self: center;
 }
 
-.block-sm {
+.block {
   background-color: darkgrey;
   height: 20px;
   width: 20px;
@@ -14,14 +14,14 @@
   border: 0.5px solid lightgrey;
 }
 
-.wrapper {
-  border: 2px solid #737373;
+.small-wrapper {
+  border: 1.5px solid #737373;
   margin: 5px;
   height: 83px;
   width: 83px;
 }
 
-.tTetro-sm {
+.color-T {
   background-color: rgba(132, 61, 198,0.8);
   color: rgba(132,61,198,0.8);
   border: 5px solid;
@@ -31,7 +31,7 @@ border-bottom-color: rgba(132,61,198, 0.1);
   border-left-color: rgba(132,61,198,0.3);
 }
 
-.oTetro-sm {
+.color-O {
   background-color: rgba(222, 167, 29,0.8);
   color: rgba(222,167,29,0.8);
     border: 5px solid;
@@ -41,7 +41,7 @@ border-bottom-color: rgba(222,167,29, 0.1);
   border-left-color: rgba(222,167,29,0.3);
 }
 
-.lTetro-sm {
+.color-L {
   background-color: rgba(179, 66, 120,0.8);
   color: rgba(179,66,120,0.8);
       border: 5px solid;
@@ -51,7 +51,7 @@ border-bottom-color: rgba(179,66,120, 0.1);
   border-left-color: rgba(179,66,120,0.3);
 }
 
-.jTetro-sm {
+.color-J {
   background-color: rgba(36, 95, 223,0.8);
   color: rgba(36,95,223,0.8);
   
@@ -62,7 +62,7 @@ border-bottom-color: rgba(36,95,223, 0.1);
   border-left-color: rgba(36,95,223,0.3);
 }
 
-.iTetro-sm {
+.color-I {
   background-color: rgba( 30, 177, 180 ,0.8);
   color: rgba(30,177,180,0.8);
       border: 5px solid;
@@ -72,17 +72,17 @@ border-bottom-color: rgba(30,177,180, 0.1);
   border-left-color: rgba(30,177,180,0.3);
 }
 
-.sTetro-sm {
-  background-color: rgba(25,184,75,0.8);
-  color: rgba(25,184,75,0.8);
+.color-S {
+  background-color: rgba(5,144,55,0.8);
+  color: rgba(5,144,55,0.8);
       border: 5px solid;
-border-bottom-color: rgba(25,184,75, 0.1);
-  border-right-color: rgba(25,184,75, 1);
-  border-top-color: rgba(25,184,75,1);
-  border-left-color: rgba(25,184,75,0.3);
+border-bottom-color: rgba(5,144,55, 0.1);
+  border-right-color: rgba(5,144,55, 1);
+  border-top-color: rgba(5,144,55,1);
+  border-left-color: rgba(5,144,55,0.3);
 }
 
-.zTetro-sm {
+.color-Z {
   background-color: rgba(208, 124, 34,0.8);
   color: rgba(208,124,34,0.8);
       border: 5px solid;
@@ -90,4 +90,10 @@ border-bottom-color: rgba(208,124,34, 0.1);
   border-right-color: rgba(208,124,34, 1);
   border-top-color: rgba(208,124,34,1);
   border-left-color: rgba(208,124,34,0.3);
+                          }
+.next-block {
+  display: grid;
+  grid-template-columns: repeat(4, 20px);
+  align-self: flex-start;
+  background-color: lightgrey;
                           }
