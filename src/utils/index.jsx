@@ -231,7 +231,7 @@ export let defaultState = () => {
     y: 4 ,
     nextShape: randomShape(),
     isRunning: true,
-    lines_score: [0,0],
+    lines_score: [0,0,0,1200],
     speed: 1000,
     gameOver: false 
   };
@@ -337,5 +337,5 @@ export function checkRows(board){
       board.unshift(Array(12).fill(""));
     }
   }
-  return [completedRows,points[completedRows]];
+  return [completedRows,points[completedRows],Math.floor(completedRows%10)];
 };

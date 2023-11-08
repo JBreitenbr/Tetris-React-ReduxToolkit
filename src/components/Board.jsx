@@ -20,11 +20,13 @@ let y=game.y;
 let shape=game.shape;
 let isRunning=game.isRunning;
 let speed=game.speed;
+let lines_score=game.lines_score;
 const block = tetrObj[shape][rotation];
 
   const blockColor = shape;
 
-  useTimer(isRunning, speed, moveDown);
+  useTimer(isRunning,/*lines_score[3], moveDown*/);
+//console.log(lines_score[3])
 const boardSquare = board.map((rowArray, row) => {
     return rowArray.map((square, col) => {
 

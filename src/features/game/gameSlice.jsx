@@ -10,6 +10,14 @@ import { defaultState } from '../../utils/index';
 function addArr(arr1,arr2){
   return [arr1[0]+arr2[0],arr1[1]+arr2[1]];
 }
+function arrEnhance(arr2d){
+  let expr=Math.floor(arr2d[0]/10);
+  return [...arr2d,expr];
+}
+function arrEnhance3d(arr3d){
+  let expr=1000 / (arr3d[2] + 1) + 200
+  return [...arr3d,expr];
+}
 const initialState = defaultState();
 
 const gameSlice = createSlice({
@@ -55,7 +63,7 @@ const gameSlice = createSlice({
           state.nextShape = randomShape();
 
          /*state.score = score + checkRows(newBoard)[1];*/
-          state.lines_score = addArr( lines_score,checkRows(newBoard));
+          state.lines_score = arrEnhance3d(arrEnhance(addArr( lines_score.slice(0,2),checkRows(newBoard).slice(0,2))));
           state.isRunning = isRunning;
           state.x = 0;
           state.y = 5;
