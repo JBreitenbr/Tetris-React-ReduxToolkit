@@ -7,7 +7,9 @@ import {
   randomShape,
 } from '../../utils';
 import { defaultState } from '../../utils/index';
-
+function addArr(arr1,arr2){
+  return [arr1[0]+arr2[0],arr1[1]+arr2[1]];
+}
 const initialState = defaultState();
 
 const gameSlice = createSlice({
@@ -35,7 +37,7 @@ const gameSlice = createSlice({
       }
     },
     moveDown: (state) => {
-      const { shape, board, x, y, rotation, nextShape, score, lines, isRunning } = state;
+      const { shape, board, x, y, rotation, nextShape, lines_score, isRunning } = state;
       if (!detectCollision(board,shape,rotation,x,y,1,0)) {
         state.x = x + 1;
       } else {
@@ -52,8 +54,8 @@ const gameSlice = createSlice({
           state.shape = nextShape;
           state.nextShape = randomShape();
 
-          state.score = score + checkRows(newBoard)[1];
-          state.lines = lines + checkRows(newBoard)[0];
+         /*state.score = score + checkRows(newBoard)[1];*/
+          state.lines_score = addArr( lines_score,checkRows(newBoard));
           state.isRunning = isRunning;
           state.x = 0;
           state.y = 5;

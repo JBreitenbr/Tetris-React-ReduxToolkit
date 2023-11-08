@@ -231,8 +231,7 @@ export let defaultState = () => {
     y: 4 ,
     nextShape: randomShape(),
     isRunning: true,
-    score: 0,
-    lines: 0,
+    lines_score: [0,0],
     speed: 1000,
     gameOver: false 
   };
