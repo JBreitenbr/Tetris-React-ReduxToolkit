@@ -11,10 +11,10 @@ export default function MessagePopup() {
   if (gameOver) {
     msg = 'Game Over';
     isHidden = '';
-  } else if (!isRunning) {
+  } /*else if (!isRunning) {
     msg = 'Paused';
     isHidden = '';
-  }
+  }*/
   return (
     <div className={`message-popup ${isHidden}`}>
       <h1>{msg}</h1>
