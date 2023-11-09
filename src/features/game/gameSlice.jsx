@@ -82,11 +82,11 @@ const gameSlice = createSlice({
       return {
         ...initialState
       };
-    }/*
-    setScore: (state, action) => {
-      state.score = action.payload;
-      if (state.score > state.highestScore) {
-        state.highestScore = state.score;
+    },
+   /* setScore: (state, action) => {
+      state.lines_score[1] = action.payload;
+      if (state.lines_score[1] > state.highestScore) {
+        state.highestScore = state.lines_score[1];
       }
     },*/
   },
@@ -101,7 +101,7 @@ export const {
   pause,
   gameOver,
   restart,
-  /*setScore,*/
+  /*setScore*/
 } = gameSlice.actions;
 
 export default gameSlice.reducer;

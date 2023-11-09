@@ -233,7 +233,8 @@ export let defaultState = () => {
     isRunning: true,
     lines_score: [0,0,0,1200],
     speed: 1000,
-    gameOver: false 
+    gameOver: false,
+    highestScore:0
   };
 };
 export function nextRotation(shape, rotation){
