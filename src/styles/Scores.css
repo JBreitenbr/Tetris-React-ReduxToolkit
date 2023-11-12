@@ -5,18 +5,15 @@
   justify-content: flex-start;
   flex-direction: column;
   width: 50vw;
-  margin-left: 6vw;
   text-align: left;
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
   color:#44397d;
-  /*border: 1px solid #44397d;*/
 }
 
 .score-btn-container {
   display: inline;
-  margin-left: 6vw;
 }
 
 .score-board-button {
@@ -26,4 +23,19 @@
   background-color: #44397d;
   color: white;
   width: 80px;
+}
+
+@media screen and (min-width: 768px){
+  .score-board-button {
+    width: 100px;
+  }
+
+  .score-board {
+    font-size: 24px;
+    text-align: right;
+  }
+
+  .score-board-button {
+    font-size: 20px;
+  }
 }

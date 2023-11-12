@@ -25,10 +25,13 @@
   border: 0.1px solid #887dbe;
 }
 
-/*
-.wrapper {
-  border: 2px solid #737373;
-  margin: 5px;
-  height: 83px;
-  width: 83px;
-}*/
+ @media screen and (min-width:768px) {
+  .title-grid {
+   grid-template-columns: repeat(80,5px);
+ }
+
+  .block-ground, .block-font {
+    height: 5px;
+    width: 5px;
+ }
+}

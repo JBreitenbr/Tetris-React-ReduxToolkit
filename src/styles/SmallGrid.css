@@ -19,6 +19,7 @@
   margin: 5px;
   height: 83px;
   width: 83px;
+  margin-left: 30px;
 }
 
 .color-T {
@@ -97,3 +98,33 @@ border-bottom-color: rgba(208,124,34, 0.1);
   align-self: flex-start;
   background-color: lightgrey;
                           }
+
+@media screen and (min-width:768px) and (max-aspect-ratio: 0.9){
+  .block {
+    height: 25px;
+    width: 25px;
+  }
+  .small-wrapper {
+   margin-left: 20px;
+   height: 103px;
+   width: 103px;
+  }
+  .next-block {
+    grid-template-columns: repeat(4, 25px);
+  }
+}
+
+@media screen and (min-width:768px) and (min-aspect-ratio: 0.9){
+  .block {
+    height: 21px;
+    width: 21px;
+  }
+  .small-wrapper {
+   margin-left: 21px;
+   height: 87px;
+   width: 87px;
+  }
+  .next-block {
+    grid-template-columns: repeat(4, 21px);
+  }
+    }

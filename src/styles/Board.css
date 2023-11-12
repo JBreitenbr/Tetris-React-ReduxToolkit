@@ -16,7 +16,6 @@
 
 .outer {
   border: 2px solid #737373;
-  /*margin-bottom: 5px;*/
 }
 
 .color-T {
@@ -89,3 +88,27 @@ border-bottom-color: rgba(208,124,34, 0.1);
   border-top-color: rgba(208,124,34,1);
   border-left-color: rgba(208,124,34,0.3);
   }
+
+@media screen and (min-width: 768px)
+and (max-aspect-ratio: 0.9){
+  .block {
+    height: 25px;
+    width:25px;
+  }
+
+  .board {
+    grid-template-columns: repeat(12,25px);
+    }
+}
+
+@media screen and (min-width: 768px)
+and (min-aspect-ratio: 0.9){
+  .block {
+    height: 21px;
+    width:21px;
+  }
+
+  .board {
+    grid-template-columns: repeat(12,21px);
+    }
+}
