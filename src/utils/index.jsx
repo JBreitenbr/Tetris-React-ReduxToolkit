@@ -1,6 +1,4 @@
 export let startGrid=Array.from(Array(20), () => Array(12).fill(""));
-/*startGrid[18]=["T","S","T","T","S","","","S","Z","O","O","I"];
-startGrid[19]=["J","L","Z","Z","S","O","O","I","S","T","S","Z"];*/
 
 export let tetrObj = {
   "":[
@@ -214,56 +212,29 @@ export let tetrObj = {
   ]
 };
 
-/*let tetrStr="STOLJIZ";
-let rando1=Math.floor(Math.random()*tetrStr.length);
-let rando2=Math.floor(Math.random()*tetrStr.length);*/
 export function randomShape(){
   let tetroStr="STOLJIZ";
   let rando=Math.floor(Math.random()*7);
    return tetroStr[rando];
 }
+/* scoreArr holds lines, score, level and speed */
 export let defaultState = () => {
   return {
     board: startGrid,
     shape: randomShape(),
     rotation: 0,
     x: 0,
-    y: 4 ,
+    y: 5 ,
     nextShape: randomShape(),
     isRunning: true,
-    lines_score: [0,0,0,1200],
-    speed: 1000,
+    scoreArr: [0,0,0,1200],
     gameOver: false,
     highestScore:0
   };
 };
-export function nextRotation(shape, rotation){
+export function nextRotation(rotation){
   return (rotation+1)%4;
 };
-/*
-export function detectCollision(board, shape, rotation, x, y, moveX, moveY){
-  let tetr=tetrObj[shape][rotation];
-  for(let i=0;i<4;i++){
-    for(let j=0;j<4;j++){
-       if(tetr[i][j]!==""){
-     if(x+i+moveX>19||y+j+moveY>11||x+i+moveX<0||y+j+moveY<0){
-       return true;
-         }
-       else {
-    let sliced=board.slice(x+moveX,x+moveX+4).map(item=>item.slice(y+moveY,y+moveY+4));
-    if(sliced){
-     if(sliced[i][j]!==""){
-      return true;
-     }}
-     else {
-       return true;
-     }
-     }
-    }
-   } 
-  }
-  return false;
-}*/
 
 export function detectCollision(board,shape,rotation,x,y,moveX,moveY) {
   let tetro=tetrObj[shape][rotation];
@@ -288,29 +259,7 @@ export function detectCollision(board,shape,rotation,x,y,moveX,moveY) {
     }
   return false;
 }
-export function detectVerticalCollision(board, shape, rotation, x, y, moveX){
-  let tetr=tetrObj[shape][rotation];
-  for(let i=0;i<4;i++){
-    for(let j=0;j<4;j++){
-       if(tetr[i][j]!==""){
-     if(x+i+moveX>19||x+i+moveX<0){
-       return true;
-         }
-       else {
-    let sliced=board.slice(x+moveX,x+moveX+4).map(item=>item.slice(y,y+4));
-    if(sliced){
-     if(sliced[i][j]!==""){
-      return true;
-     }}
-     else {
-       return true;
-     }
-     }
-    }
-   } 
-  }
-  return false;
-}
+
 export function addTetroToBoard(board,shape,rotation,x,y){
     let fitOnBoard=true;
     let tetr=tetrObj[shape][rotation];

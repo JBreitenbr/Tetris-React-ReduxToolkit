@@ -1,32 +1,22 @@
 import React from 'react';
 import '../styles/Board.css';
 import Square from './Square';
-import {tetrObj,defaultState} from '../utils/index.jsx';
-import {useSelector,useDispatch} from 'react-redux';
-import { useTimer } from '../utils/useTimer';
-import {moveDown} from '../features/game/gameSlice';
+import {tetrObj} from '../utils/index.jsx';
+import {useSelector} from 'react-redux';
+import {useTimer} from '../utils/useTimer';
+
 const Board = () => {
-let tetros=["S","T","O","L","J", "I", "Z"];
-let hash={};
-for(let i=0;i<tetros.length;i++){
-hash[tetros[i]]="block "+tetros[i].toLowerCase()+"Tetro";}
-hash[""]="block";
 const game = useSelector((state) => state.game);
-//let game=defaultState();
 let board=game.board;
 let rotation=game.rotation;
 let x=game.x;
 let y=game.y;
 let shape=game.shape;
 let isRunning=game.isRunning;
-let speed=game.speed;
-let lines_score=game.lines_score;
 const block = tetrObj[shape][rotation];
+const blockColor = shape;
+useTimer(isRunning);
 
-  const blockColor = shape;
-
-  useTimer(isRunning,/*lines_score[3], moveDown*/);
-//console.log(lines_score[3])
 const boardSquare = board.map((rowArray, row) => {
     return rowArray.map((square, col) => {
 
@@ -50,30 +40,6 @@ const boardSquare = board.map((rowArray, row) => {
       <div className="board">{boardSquare}</div>
     </div>
   );
- /* return (<div className="outer">
-    {board.map((items, index) => {
-      return (
-        <div className="board" key={index}>
-          {items.map((subItems, sIndex) => {
-          const blockY = sIndex+y;
-          const blockX = index+x;
-          let val="white";
-          let cl;
-          if (
-            blockX >= 0 &&
-            blockX < 4 &&
-            blockY >= 0 &&
-            blockY < 4
-          ) {
-            cl=tetro[blockX][blockY] === "" ? "white" : "blue";
-            console.log(cl);
-          }
-            return <div key={sIndex} className={hash[subItems]} style={{backgroundColor:{cl}}} > {subItems} </div>;
-          })}
-        </div>
-      );
-    })}
-  </div>)*/
 };
 
 export default Board;

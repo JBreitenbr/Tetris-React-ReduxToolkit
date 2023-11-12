@@ -1,12 +1,11 @@
 import React from 'react';
 import '../styles/Scores.css';
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { resume, pause, restart} from '../features/game/gameSlice';
 export default function Scores() {const dispatch = useDispatch();
-  const game = useSelector((state) => state.game);
-  const { lines_score, isRunning, gameOver, speed}=game;
-                             function playHandler() {
+const game = useSelector((state) => state.game);
+const {scoreArr,isRunning,gameOver}=game;
+function playHandler() {
     if (gameOver) return;
     if (isRunning) {
       dispatch(pause());
@@ -20,9 +19,9 @@ export default function Scores() {const dispatch = useDispatch();
       }
     return (<>
         <div className="score-board">
-          <div>Score: {lines_score[1]}</div>
-          <div>Lines: {lines_score[0]}</div>
-          <div>Level: {lines_score[2]}</div>
+          <div>Score: {scoreArr[1]}</div>
+          <div>Lines: {scoreArr[0]}</div>
+          <div>Level: {scoreArr[2]}</div>
 
         </div>
           <div className="score-btn-container">
@@ -34,4 +33,4 @@ export default function Scores() {const dispatch = useDispatch();
             </button>
         </div></>
     )
-                                       }
+  }

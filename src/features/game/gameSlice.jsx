@@ -7,6 +7,7 @@ import {
   randomShape,
 } from '../../utils';
 import { defaultState } from '../../utils/index';
+
 function addArr(arr1,arr2){
   return [arr1[0]+arr2[0],arr1[1]+arr2[1]];
 }
@@ -27,7 +28,7 @@ const gameSlice = createSlice({
   reducers: {
     rotate: (state) => {
       const { shape, rotation, board, x, y } = state;
-      const newRotation = nextRotation(shape, rotation);
+      const newRotation = nextRotation(rotation);
      if (!detectCollision(board,shape,newRotation,x,y,0,0)) {
         state.rotation = newRotation;
       }
@@ -45,7 +46,7 @@ const gameSlice = createSlice({
       }
     },
     moveDown: (state) => {
-      const { shape, board, x, y, rotation, nextShape, lines_score, isRunning } = state;
+      const { shape, board, x, y, rotation, nextShape, scoreArr, isRunning } = state;
       if (!detectCollision(board,shape,rotation,x,y,1,0)) {
         state.x = x + 1;
       } else {
@@ -61,9 +62,7 @@ const gameSlice = createSlice({
           state.board = newBoard;
           state.shape = nextShape;
           state.nextShape = randomShape();
-
-         /*state.score = score + checkRows(newBoard)[1];*/
-          state.lines_score = arrEnhance3d(arrEnhance(addArr( lines_score.slice(0,2),checkRows(newBoard).slice(0,2))));
+          state.scoreArr = arrEnhance3d(arrEnhance(addArr( scoreArr.slice(0,2),checkRows(newBoard).slice(0,2))));
           state.isRunning = isRunning;
           state.x = 0;
           state.y = 5;
@@ -83,12 +82,6 @@ const gameSlice = createSlice({
         ...initialState
       };
     },
-   /* setScore: (state, action) => {
-      state.lines_score[1] = action.payload;
-      if (state.lines_score[1] > state.highestScore) {
-        state.highestScore = state.lines_score[1];
-      }
-    },*/
   },
 });
 
@@ -100,8 +93,7 @@ export const {
   resume,
   pause,
   gameOver,
-  restart,
-  /*setScore*/
+  restart
 } = gameSlice.actions;
 
 export default gameSlice.reducer;
