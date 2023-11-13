@@ -23,7 +23,7 @@
   margin-left: 30px;
 }
 
-.color-T {
+.color-t {
   background-color: rgba(132, 61, 198,0.8);
   color: rgba(132,61,198,0.8);
   border: 5px solid;
@@ -33,7 +33,7 @@ border-bottom-color: rgba(132,61,198, 0.1);
   border-left-color: rgba(132,61,198,0.3);
 }
 
-.color-O {
+.color-o {
   background-color: rgba(222, 167, 29,0.8);
   color: rgba(222,167,29,0.8);
     border: 5px solid;
@@ -43,7 +43,7 @@ border-bottom-color: rgba(222,167,29, 0.1);
   border-left-color: rgba(222,167,29,0.3);
 }
 
-.color-L {
+.color-l {
   background-color: rgba(179, 66, 120,0.8);
   color: rgba(179,66,120,0.8);
       border: 5px solid;
@@ -53,7 +53,7 @@ border-bottom-color: rgba(179,66,120, 0.1);
   border-left-color: rgba(179,66,120,0.3);
 }
 
-.color-J {
+.color-j {
   background-color: rgba(36, 95, 223,0.8);
   color: rgba(36,95,223,0.8);
   
@@ -64,7 +64,7 @@ border-bottom-color: rgba(36,95,223, 0.1);
   border-left-color: rgba(36,95,223,0.3);
 }
 
-.color-I {
+.color-i {
   background-color: rgba( 30, 177, 180 ,0.8);
   color: rgba(30,177,180,0.8);
       border: 5px solid;
@@ -74,7 +74,7 @@ border-bottom-color: rgba(30,177,180, 0.1);
   border-left-color: rgba(30,177,180,0.3);
 }
 
-.color-S {
+.color-s {
   background-color: rgba(5,144,55,0.8);
   color: rgba(5,144,55,0.8);
       border: 5px solid;
@@ -84,7 +84,7 @@ border-bottom-color: rgba(5,144,55, 0.1);
   border-left-color: rgba(5,144,55,0.3);
 }
 
-.color-Z {
+.color-z {
   background-color: rgba(208, 124, 34,0.8);
   color: rgba(208,124,34,0.8);
       border: 5px solid;
@@ -128,11 +128,22 @@ border-bottom-color: rgba(208,124,34, 0.1);
   }
   
   .small-grid {
-    margin-left: 10vw;
+    margin-left: 5vw;
   }
   
   .next-block {
     grid-template-columns: repeat(4, 21px);
-    margin-left: 10vw;
+    margin-left: 5vw;
   }
     }
+
+@media screen and (min-width:1120px)   {
+    .block {
+      height: 26px;
+      width: 26px;
+    }
+    .next-block {
+      grid-template-columns: repeat(4, 26px);
+      margin-left: 3vw;
+    }
+  }

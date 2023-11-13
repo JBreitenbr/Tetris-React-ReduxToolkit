@@ -24,10 +24,16 @@ body {
 
 @media screen and (min-width: 768px) {
   .flex-row {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
-  .comp-wrapper {
+}
+@media screen and (min-width: 1120px) {
+
+  .flex-row {
     margin-top: 5px;
+  }
+  .comp-wrapper {
+    margin-top: 0px;
   }
 }

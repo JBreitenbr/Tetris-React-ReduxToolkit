@@ -12,7 +12,7 @@ export default function SmallGrid() {
   const blockToDisplay = block.map((rowArr, row) => {
     return rowArr.map((square, col) => {
       return (
-        <Square key={`${row}${col}`} color={square === "" ? "" : nextShape} />
+        <Square key={`${row}${col}`} color={square === "" ? "" : nextShape.toLowerCase()} className="block"/>
       );
     });
   });

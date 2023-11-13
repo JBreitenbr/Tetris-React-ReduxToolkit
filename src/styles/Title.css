@@ -35,3 +35,14 @@
     width: 5px;
  }
 }
+
+@media screen and (min-width: 1120px) {
+  .title-grid {
+    grid-template-columns: repeat(80,5.5px);
+  }
+
+  .block-ground, .block-font {
+    height: 5.5px;
+    width: 5.5px;
+  }
+}

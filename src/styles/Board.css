@@ -5,7 +5,7 @@
   align-self: center;
 }
 
-.block {
+.Block {
   background-color: darkgrey;
   height: 20px;
   width: 20px;
@@ -91,7 +91,7 @@ border-bottom-color: rgba(208,124,34, 0.1);
 
 @media screen and (min-width: 768px)
 and (max-aspect-ratio: 0.9){
-  .block {
+  .Block {
     height: 25px;
     width:25px;
   }
@@ -103,12 +103,22 @@ and (max-aspect-ratio: 0.9){
 
 @media screen and (min-width: 768px)
 and (min-aspect-ratio: 0.9){
-  .block {
+  .Block {
     height: 21px;
     width:21px;
   }
 
   .board {
     grid-template-columns: repeat(12,21px);
+    }
+}
+
+@media screen and (min-width: 1120px){
+  .Block {
+    height: 26px;
+    width:26px;
+  }
+  .board {
+   grid-template-columns: repeat(12,26px);
     }
 }

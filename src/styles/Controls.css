@@ -31,3 +31,10 @@
     font-size: 15px;
   }
 }
+
+@media screen and (min-width: 1120px){
+  .control-button {
+    width: 78px;
+    font-size: 16px;
+  }
+}

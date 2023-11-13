@@ -1,11 +1,9 @@
 .score-board {
-  margin: 2px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  width: 50vw;
-  text-align: left;
+  text-align: center;
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -30,13 +28,33 @@
 
   .score-board {
     font-size: 20px;
-    text-align: right;
   }
 
 }
 
-@media screen and (max-width: 950px) and (min-aspect-ratio: 0.9){
+@media screen and (max-width: 1050px) and (min-aspect-ratio: 0.9){
   .flex-row-2 {
-    display: inline;
+    flex-direction: row;
+    margin-right: 32vw;
+  }
+}
+
+@media screen and (min-width: 1120px){
+  .score-board-button {
+    width: 100px;
+    font-size: 20px;
+  }
+
+  .score-board {
+    font-size: 24px;
+  }
+
+  .score-btn-container {
+    left-margin: 5vw;
+  }
+
+  .flex-row-2 {
+    display: flex;
+    margin-right: 32vw;
   }
 }
