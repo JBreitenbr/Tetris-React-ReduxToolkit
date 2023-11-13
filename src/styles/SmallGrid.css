@@ -15,6 +15,7 @@
 }
 
 .small-wrapper {
+  margin-top: 15px;
   border: 1.5px solid #737373;
   margin: 5px;
   height: 83px;
@@ -119,12 +120,19 @@ border-bottom-color: rgba(208,124,34, 0.1);
     height: 21px;
     width: 21px;
   }
+  
   .small-wrapper {
-   margin-left: 21px;
+   border: 1.5px solid #e1eff2;
    height: 87px;
    width: 87px;
   }
+  
+  .small-grid {
+    margin-left: 10vw;
+  }
+  
   .next-block {
     grid-template-columns: repeat(4, 21px);
+    margin-left: 10vw;
   }
     }

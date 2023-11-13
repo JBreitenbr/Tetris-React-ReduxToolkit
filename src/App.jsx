@@ -12,7 +12,8 @@ export default function App() {
      <div className="comp-wrapper title">  <Title/></div>
     <div className="flex-row">
      <div className="small-wrapper"><SmallGrid/></div>
-      <Scores/></div>
+      <div className="flex-row-2">
+    <div><Scores/></div></div></div>
     <div className="comp-wrapper"><Board/></div>
     <div className="comp-wrapper"><Controls/></div>
     <div className="comp-wrapper">

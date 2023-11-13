@@ -17,25 +17,26 @@
 }
 
 .score-board-button {
-  padding: 1em;
-  border-width: 2px;
-  border-color: none;
+  padding: 0.5em;
   background-color: #44397d;
   color: white;
-  width: 80px;
 }
 
 @media screen and (min-width: 768px){
   .score-board-button {
-    width: 100px;
+    width: 75px;
+    font-size: 16px;
   }
 
   .score-board {
-    font-size: 24px;
+    font-size: 20px;
     text-align: right;
   }
 
-  .score-board-button {
-    font-size: 20px;
+}
+
+@media screen and (max-width: 950px) and (min-aspect-ratio: 0.9){
+  .flex-row-2 {
+    display: inline;
   }
 }

@@ -5,11 +5,16 @@ body {
   background-color: #e1eff2;
 }
 .flex-row {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
 }
-
+.flex-row-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .comp-wrapper {
   display: flex;
   align-items: center;
