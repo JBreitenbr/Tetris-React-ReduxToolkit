@@ -226,7 +226,7 @@ export let defaultState = () => {
     x: 0,
     y: 5 ,
     nextShape: randomShape(),
-    isRunning: true,
+    isRunning: false,
     scoreArr: [0,0,0,1200],
     gameOver: false,
     highestScore:0
